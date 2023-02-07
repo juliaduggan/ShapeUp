@@ -1,0 +1,47 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+}
+
+header h2 {
+    font-size: 250%;
+    font-style: italic;
+    color: steelblue;
+    text-shadow: 3px 3px 7px steelblue;
+}
+header h2, header h3 {
+    padding-left: 2em;
+}
+
+header img {
+    float: left; 
+}
+
+main {
+    clear: left;
+}
+
+/* Section Link Colors */
+section a:link, section a:visited {
+    color:maroon;
+} 
+section a:hover, section a:focus {
+    color: steelblue;
+}
+
+/* Aside Link Colors */
+aside a:link, aside a:visited {
+    color: steelblue
+}
+aside a:hover, aside a:focus {
+    color: maroon;
+}
+
+aside li {
+    line-height: 1.5em;
+}
+
+footer p {
+    font-size: 75%;
+    text-align: center;
+}
