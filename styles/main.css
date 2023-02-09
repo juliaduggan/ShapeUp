@@ -4,6 +4,7 @@
 
 html {
     background-color: lightsteelblue;
+    background-image: url(../images/bgtile.jpg);
 }
 
 body {
@@ -41,6 +42,7 @@ p {
 
 header img {
     float: left; 
+    margin: 0 .75em;
 }
 
 main {
@@ -63,11 +65,27 @@ aside a:hover, aside a:focus {
     color: maroon;
 }
 
+section {
+    float: right;
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+}
+
+aside h3 {
+    padding-top: 50px;
+    color: maroon;
+    font-size: 120%;
+}
+
 aside li {
     line-height: 1.5em;
 }
 
 footer {
+    clear: both;
     background-color: steelblue;
     padding: 15px 0;
 }
