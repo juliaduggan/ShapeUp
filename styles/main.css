@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .clearfix::after {
@@ -20,7 +22,7 @@ html {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     border: 3px solid steelblue;
     margin: 0 auto;
@@ -32,6 +34,7 @@ body {
 header {
     border-bottom: 3px solid steelblue;
     background-image: linear-gradient(white, lightsteelblue);
+    border-radius: 25px 25px 0 0;
 }
 
 header h2 {
@@ -61,7 +64,7 @@ header img {
 
 Navigation Menu 
 
-==========================================*/
+
 #nav_menu {
     margin: 0;
 }
@@ -84,10 +87,6 @@ Navigation Menu
     border-right: none;
 }
 
-#nav_menu ul ul {
-    display: none;
-}
-
 #nav_menu ul li a {
     font-weight: bold;
     text-decoration: none;
@@ -97,6 +96,63 @@ Navigation Menu
 #nav_menu ul li a:hover {
     color:red;
 }
+==========================================*/
+
+/* ========================================
+
+        nav_menu using block and float
+
+==========================================*/
+#nav_menu {
+    border-bottom: 3px solid steelblue;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    position: relative;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: .7em 0;
+    background-color: steelblue;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu a:hover {
+    color: black;
+    background-color: lightsteelblue;
+}
+
 /* ========================================
 
 Navigation List 
@@ -132,6 +188,7 @@ Navigation List
 
 main {
     clear: left;
+    padding-right: .25em;
 }
 
 /* Section Link Colors */
@@ -151,12 +208,21 @@ aside a:hover, aside a:focus {
 }
 
 section {
-    float: right;
-    width: 70%;
+    float: left;
+    width: 50%;
+    padding: 0 .3em;
 }
 
 aside {
-    width: 30%;
+    float: left;
+    width: 25%;
+}
+
+#rightcol {
+    float: right;
+    width: 25%;
+    border-left: 3px solid steelblue;
+    padding-left: 10px;
 }
 
 aside h3 {
